@@ -5,19 +5,19 @@ class Boid {
         this.velocity.setMag(random(2,4))
         this.acceleration = createVector();
         this.maxForce = 0.2
-        this.maxSpeed = 4
+        this.maxSpeed = 5
         
     }
 
     edges() {
-        if (this.position.x > width) {
+        if(this.position.x > width){
             this.position.x = 0
-        }else if (this.position.x < 0){
+        }else if(this.position.x < 0){
             this.position.x = width
         }
-        if (this.position.y > height) {
+        if(this.position.y > height){
             this.position.y = 0
-        }else if (this.position.y < 0){
+        }else if(this.position.y < 0){
             this.position.y = height
             }
         }
@@ -64,7 +64,7 @@ class Boid {
         }
         return steering
     }
-f
+
     separation(boids) {
         let perceptionRadius = 30
         let steering = createVector()
